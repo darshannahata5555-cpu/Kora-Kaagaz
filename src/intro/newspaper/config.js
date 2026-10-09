@@ -52,11 +52,11 @@ const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 export const DESK = {
   photo: {
-    src: null, // e.g. '/assets/desk/desk-photo.jpg'  (2560 px wide, landscape)
-    compact: null, // optional smaller version for phones, e.g. '/assets/desk/desk-photo-1280.jpg'
-    elevation: 66,
-    sun: [-0.55, 0.65, -0.52],
-    overscan: 1.15, // the opening frame shows the central ~87% of the photo, leaving margin for camera moves
+    src: publicAsset('assets/desk/desk-photo.jpg'),
+    compact: publicAsset('assets/desk/desk-photo-1280.jpg'),
+    elevation: 82,
+    sun: [0.55, 0.65, -0.52],
+    overscan: 1.08, // retain the dressed edges while leaving enough margin for camera moves
   },
   procedural: {
     wood: publicAsset('assets/desk/walnut.jpg'),
