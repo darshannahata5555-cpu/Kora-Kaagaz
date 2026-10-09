@@ -564,3 +564,22 @@ export const contact = {
 
 /** Every story with its own page: real case studies first, then the samples. */
 export const allStories = [...stories, ...projects];
+
+// Public files need the repository prefix when the site is hosted on GitHub Pages.
+const addBaseToPublicPaths = (value) => {
+  if (typeof value === 'string') {
+    return value.startsWith('/work/') ? `${import.meta.env.BASE_URL}${value.slice(1)}` : value;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => {
+      value[index] = addBaseToPublicPaths(item);
+    });
+  } else if (value && typeof value === 'object') {
+    Object.keys(value).forEach((key) => {
+      value[key] = addBaseToPublicPaths(value[key]);
+    });
+  }
+  return value;
+};
+
+[websites, stories, printRoom, projects, studio].forEach(addBaseToPublicPaths);

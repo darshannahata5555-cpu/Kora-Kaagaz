@@ -48,6 +48,8 @@ export const CAMERA_FOV = 30;
  * appears to be shot from, and `sun` to its light direction (x right, y up,
  * z toward the viewer; upper-left daylight ≈ [-0.55, 0.65, -0.52]).
  */
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 export const DESK = {
   photo: {
     src: null, // e.g. '/assets/desk/desk-photo.jpg'  (2560 px wide, landscape)
@@ -57,11 +59,11 @@ export const DESK = {
     overscan: 1.15, // the opening frame shows the central ~87% of the photo, leaving margin for camera moves
   },
   procedural: {
-    wood: '/assets/desk/walnut.jpg',
-    woodCompact: '/assets/desk/walnut-compact.jpg',
-    detail: '/assets/desk/walnut-detail.jpg',
+    wood: publicAsset('assets/desk/walnut.jpg'),
+    woodCompact: publicAsset('assets/desk/walnut-compact.jpg'),
+    detail: publicAsset('assets/desk/walnut-detail.jpg'),
     size: [8, 5.333], // scene units covered by the wood texture
     centre: [0.4, -0.2],
   },
-  paperTile: { src: '/assets/paper/newsprint.jpg', cssSize: 384 },
+  paperTile: { src: publicAsset('assets/paper/newsprint.jpg'), cssSize: 384 },
 };
