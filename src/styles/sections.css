@@ -275,8 +275,6 @@
   list-style: none;
 }
 .directory__row {
-  --ink-x: 50%;
-  --ink-y: 50%;
   position: relative;
   display: grid;
   grid-template-columns: 72px minmax(0, 1fr) auto;
@@ -285,9 +283,6 @@
   padding: clamp(20px, 2.4vw, 30px) 0;
   border-bottom: 1px solid var(--ink);
   transition: background-color 0.35s;
-}
-.directory__row:hover {
-  background-image: radial-gradient(circle 260px at var(--ink-x) var(--ink-y), rgba(123, 45, 53, 0.1), transparent 72%);
 }
 .directory__row:hover {
   background-color: var(--paper-2);

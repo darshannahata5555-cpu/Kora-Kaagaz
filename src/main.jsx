@@ -11,7 +11,6 @@ import '@fontsource/ibm-plex-mono/500.css';
 
 import './styles/base.css';
 import './styles/front.css';
-import './styles/motion.css';
 import './styles/sections.css';
 import './styles/case.css';
 import './styles/intro.css';

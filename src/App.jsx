@@ -9,7 +9,6 @@ import { initReveals } from './lib/reveal.js';
 
 import NavBar from './components/NavBar.jsx';
 import FrontPage from './components/FrontPage.jsx';
-import MotionBridge from './components/MotionBridge.jsx';
 import SelectedWork from './components/SelectedWork.jsx';
 import Websites from './components/Websites.jsx';
 import PrintRoom from './components/PrintRoom.jsx';
@@ -216,7 +215,6 @@ export default function App() {
             {intro && <div ref={spacerRef} className="pin__spacer" aria-hidden="true" />}
           </div>
 
-          <MotionBridge onNavigate={goToSection} />
           <Websites ref={workRef} />
           <PrintRoom onOpen={openProject} />
           <SelectedWork vtSlug={vtSlug} onOpen={openProject} />
